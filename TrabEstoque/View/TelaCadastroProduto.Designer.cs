@@ -30,7 +30,7 @@
         {
             lblCadastroProd = new Label();
             panelCadastroProd = new Panel();
-            btnCancelar = new Button();
+            btnSairCadastro = new Button();
             btnConfirmar = new Button();
             txtPrecoProd = new TextBox();
             txtQuantidadeProd = new TextBox();
@@ -52,7 +52,7 @@
             // panelCadastroProd
             // 
             panelCadastroProd.BackColor = SystemColors.ButtonHighlight;
-            panelCadastroProd.Controls.Add(btnCancelar);
+            panelCadastroProd.Controls.Add(btnSairCadastro);
             panelCadastroProd.Controls.Add(btnConfirmar);
             panelCadastroProd.Controls.Add(txtPrecoProd);
             panelCadastroProd.Controls.Add(txtQuantidadeProd);
@@ -62,16 +62,16 @@
             panelCadastroProd.Size = new Size(329, 171);
             panelCadastroProd.TabIndex = 1;
             // 
-            // btnCancelar
+            // btnSairCadastro
             // 
-            btnCancelar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCancelar.Location = new Point(29, 117);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(125, 36);
-            btnCancelar.TabIndex = 4;
-            btnCancelar.Text = "&Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
-            btnCancelar.Click += btnCancelar_Click;
+            btnSairCadastro.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSairCadastro.Location = new Point(29, 117);
+            btnSairCadastro.Name = "btnSairCadastro";
+            btnSairCadastro.Size = new Size(125, 36);
+            btnSairCadastro.TabIndex = 4;
+            btnSairCadastro.Text = "&Sair";
+            btnSairCadastro.UseVisualStyleBackColor = true;
+            btnSairCadastro.Click += btnSairCadastro_Click;
             // 
             // btnConfirmar
             // 
@@ -143,7 +143,7 @@
         private TextBox txtNomeProd;
         private TextBox txtPrecoProd;
         private TextBox txtQuantidadeProd;
-        private Button btnCancelar;
+        private Button btnSairCadastro;
         private Button btnConfirmar;
     }
 }

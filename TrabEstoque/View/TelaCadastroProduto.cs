@@ -40,11 +40,11 @@ namespace TrabEstoque.View
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnSairCadastro_Click(object sender, EventArgs e)
         {
-            txtNomeProd.Text = "";
-            txtPrecoProd.Text = "";
-            txtQuantidadeProd.Text = "";
+            this.Close();
+            TelaInicial telaInicial = new TelaInicial();
+            telaInicial.Show();
         }
     }
 }
