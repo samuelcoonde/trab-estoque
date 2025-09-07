@@ -23,6 +23,28 @@ namespace TrabEstoque.Service
             return ValidaProduto(produto) ? _produtoRepository.CadastrarProduto(produto) : false;
         }
 
+        public List<Produto> ListarProdutos()
+        {
+            return _produtoRepository.BuscarListaProdutos();
+        }
+
+        public Produto BuscaProdutoPorId(int id)
+        {
+            if(id > 0)
+            {
+                return _produtoRepository.BuscarProdutoPorId(id);
+            }
+            else
+            {
+                throw new IOException("Não é possível haver um produto com id negativo!");
+            }
+        }
+
+        public bool AtualizaQuantidadeDoProduto(Produto produto)
+        {
+            return _produtoRepository.AtualizaQuantidadeProduto(produto);
+        }
+
         public bool ValidaProduto(Produto produto)
         {
             // Se todos os campos estiverem corretos retorna true 

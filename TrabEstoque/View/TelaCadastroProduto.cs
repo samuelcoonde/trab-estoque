@@ -44,7 +44,7 @@ namespace TrabEstoque.View
         {
             this.Close();
             TelaInicial telaInicial = new TelaInicial();
-            telaInicial.Show();
+            telaInicial.ShowDialog();
         }
     }
 }

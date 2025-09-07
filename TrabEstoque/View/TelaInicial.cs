@@ -20,15 +20,15 @@ namespace TrabEstoque.View
         private void btnCadastrarProd_Click(object sender, EventArgs e)
         {
             TelaCadastroProduto telaCadastro = new TelaCadastroProduto();
-            telaCadastro.Show();
-            this.Hide();
+            telaCadastro.ShowDialog();
+            this.Close();
         }
 
         private void btnAddProd_Click(object sender, EventArgs e)
         {
             TelaAdicionarProduto telaAddProd = new TelaAdicionarProduto();
-            telaAddProd.Show();
-            this.Close(); // Fechar igual o do PIM, que dá para voltar dps
+            telaAddProd.ShowDialog();
+            this.Close();
         }
     }
 }
