@@ -25,4 +25,4 @@
   <li>.NET</li>
 </ul>
 
-<p>Este projeto é um trabalho da matéria de Tópicos especiais de programação orientada a objetos</p>
+<p>Este projeto é um trabalho da matéria de Programação orientada a objetos II</p>
