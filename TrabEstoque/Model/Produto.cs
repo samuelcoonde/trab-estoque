@@ -15,8 +15,17 @@ namespace TrabEstoque.Model
 
         public Produto() { }
 
-        public Produto(String nome, float preco, int quantidade)
+        public Produto(string nome, float preco, int quantidade)
         {
+            this._nome = nome;
+            this. _preco = preco;
+            this._quantidade = quantidade;
+        }
+
+        // Construtor para exibição
+        public Produto(int id, String nome, float preco, int quantidade)
+        {
+            this._id = id;
             this._nome = nome;
             this._preco = preco;
             this._quantidade = quantidade;

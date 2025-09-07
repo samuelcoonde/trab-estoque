@@ -17,3 +17,9 @@ C:\Users\samuel\OneDrive\Documentos\Faculdade\4Semestre\POOCSHARP\TrabEstoque\Tr
 C:\Users\samuel\OneDrive\Documentos\Faculdade\4Semestre\POOCSHARP\TrabEstoque\TrabEstoque\obj\Debug\net8.0-windows\TrabEstoque.genruntimeconfig.cache
 C:\Users\samuel\OneDrive\Documentos\Faculdade\4Semestre\POOCSHARP\TrabEstoque\TrabEstoque\obj\Debug\net8.0-windows\ref\TrabEstoque.dll
 C:\Users\samuel\OneDrive\Documentos\Faculdade\4Semestre\POOCSHARP\TrabEstoque\TrabEstoque\obj\Debug\net8.0-windows\TrabEstoque.View.TelaCadastroProduto.resources
+C:\Users\samuel\OneDrive\Documentos\Faculdade\4Semestre\POOCSHARP\TrabEstoque\TrabEstoque\obj\Debug\net8.0-windows\TrabEstoque.View.TelaAdicionarProduto.resources
+C:\Users\samuel\OneDrive\Documentos\Faculdade\4Semestre\POOCSHARP\TrabEstoque\TrabEstoque\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\samuel\OneDrive\Documentos\Faculdade\4Semestre\POOCSHARP\TrabEstoque\TrabEstoque\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\samuel\OneDrive\Documentos\Faculdade\4Semestre\POOCSHARP\TrabEstoque\TrabEstoque\bin\Debug\net8.0-windows\Npgsql.dll
+C:\Users\samuel\OneDrive\Documentos\Faculdade\4Semestre\POOCSHARP\TrabEstoque\TrabEstoque\obj\Debug\net8.0-windows\TrabEstoque.csproj.AssemblyReference.cache
+C:\Users\samuel\OneDrive\Documentos\Faculdade\4Semestre\POOCSHARP\TrabEstoque\TrabEstoque\obj\Debug\net8.0-windows\TrabEsto.BA31D4DB.Up2Date

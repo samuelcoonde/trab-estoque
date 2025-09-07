@@ -88,6 +88,7 @@
             btnAddProd.TabIndex = 3;
             btnAddProd.Text = "Adicionar produto";
             btnAddProd.UseVisualStyleBackColor = true;
+            btnAddProd.Click += btnAddProd_Click;
             // 
             // btnRemoverProd
             // 

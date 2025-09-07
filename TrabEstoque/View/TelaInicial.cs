@@ -23,5 +23,12 @@ namespace TrabEstoque.View
             telaCadastro.Show();
             this.Hide();
         }
+
+        private void btnAddProd_Click(object sender, EventArgs e)
+        {
+            TelaAdicionarProduto telaAddProd = new TelaAdicionarProduto();
+            telaAddProd.Show();
+            this.Close(); // Fechar igual o do PIM, que dá para voltar dps
+        }
     }
 }
