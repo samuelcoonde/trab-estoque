@@ -70,7 +70,7 @@
             btnCadastrarProd.BackColor = SystemColors.ButtonHighlight;
             btnCadastrarProd.Cursor = Cursors.Hand;
             btnCadastrarProd.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCadastrarProd.Location = new Point(240, 122);
+            btnCadastrarProd.Location = new Point(248, 113);
             btnCadastrarProd.Name = "btnCadastrarProd";
             btnCadastrarProd.Size = new Size(294, 71);
             btnCadastrarProd.TabIndex = 2;
