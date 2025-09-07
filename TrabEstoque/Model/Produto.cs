@@ -1,0 +1,61 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TrabEstoque.Model
+{
+    public class Produto
+    {
+        public int _id;
+        public String _nome;
+        public float _preco;
+        public int _quantidade;
+
+        public Produto() { }
+
+        public Produto(String nome, float preco, int quantidade)
+        {
+            this._nome = nome;
+            this._preco = preco;
+            this._quantidade = quantidade;
+        }
+
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+
+        public String Nome
+        {
+            get { return _nome; }
+            set { _nome = value; }
+        }
+
+        public float Preco
+        {
+            get { return _preco; }
+            set
+            {
+                if(value > 0)
+                {
+                    _preco = value;
+                }
+            }
+        }
+        
+        public int Quantidade
+        {
+            get { return _quantidade; }
+            set
+            {
+                if(value > 0)
+                {
+                    _quantidade = value;
+                }
+            }
+        }
+    }
+}
