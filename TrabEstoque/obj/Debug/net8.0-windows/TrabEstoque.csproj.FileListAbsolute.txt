@@ -23,3 +23,4 @@ C:\Users\samuel\OneDrive\Documentos\Faculdade\4Semestre\POOCSHARP\TrabEstoque\Tr
 C:\Users\samuel\OneDrive\Documentos\Faculdade\4Semestre\POOCSHARP\TrabEstoque\TrabEstoque\bin\Debug\net8.0-windows\Npgsql.dll
 C:\Users\samuel\OneDrive\Documentos\Faculdade\4Semestre\POOCSHARP\TrabEstoque\TrabEstoque\obj\Debug\net8.0-windows\TrabEstoque.csproj.AssemblyReference.cache
 C:\Users\samuel\OneDrive\Documentos\Faculdade\4Semestre\POOCSHARP\TrabEstoque\TrabEstoque\obj\Debug\net8.0-windows\TrabEsto.BA31D4DB.Up2Date
+C:\Users\samuel\OneDrive\Documentos\Faculdade\4Semestre\POOCSHARP\TrabEstoque\TrabEstoque\obj\Debug\net8.0-windows\TrabEstoque.View.TelaRetirarProduto.resources

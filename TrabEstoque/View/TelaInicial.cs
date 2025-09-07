@@ -19,16 +19,26 @@ namespace TrabEstoque.View
 
         private void btnCadastrarProd_Click(object sender, EventArgs e)
         {
+            this.Hide();
             TelaCadastroProduto telaCadastro = new TelaCadastroProduto();
             telaCadastro.ShowDialog();
-            this.Close();
+            this.Show();
         }
 
         private void btnAddProd_Click(object sender, EventArgs e)
         {
+            this.Hide();
             TelaAdicionarProduto telaAddProd = new TelaAdicionarProduto();
             telaAddProd.ShowDialog();
-            this.Close();
+            this.Show();
+        }
+
+        private void btnRemoverProd_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TelaRetirarProduto telaRetirarProd = new TelaRetirarProduto();
+            telaRetirarProd.ShowDialog();
+            this.Show();
         }
     }
 }

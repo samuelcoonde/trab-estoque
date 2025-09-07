@@ -100,6 +100,7 @@
             btnRemoverProd.TabIndex = 4;
             btnRemoverProd.Text = "Remover produto";
             btnRemoverProd.UseVisualStyleBackColor = true;
+            btnRemoverProd.Click += btnRemoverProd_Click;
             // 
             // pictureBox2
             // 

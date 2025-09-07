@@ -60,7 +60,7 @@ namespace TrabEstoque.Model
             get { return _quantidade; }
             set
             {
-                if(value > 0)
+                if(value >= 0)
                 {
                     _quantidade = value;
                 }

@@ -32,57 +32,89 @@ namespace TrabEstoque.View
 
         private void btnConfirmaIdProdAdd_Click(object sender, EventArgs e)
         {
-            _tabelaProdutos.Visible = false;
-            _prodQueVaiSerAtualizado = _produtoService.BuscaProdutoPorId(int.Parse(txtIdProdAdd.Text));
-
-            if (_prodQueVaiSerAtualizado != null)
+            if (!String.IsNullOrEmpty(txtIdProdAdd.Text)) // Verificando se o id informado para busca é nulo
             {
-                pnlDadosProdAdd.Visible = true;
-                lblNomeProdAdd.Text = "Nome: " + _prodQueVaiSerAtualizado.Nome;
-                lblPrecoProdAdd.Text = "Preço: " + _prodQueVaiSerAtualizado.Preco.ToString("C2"); // Convertendo para string
-                lblQuantidadeProd.Text = "Quantidade: " + _prodQueVaiSerAtualizado.Quantidade.ToString();
+                try
+                {
+                    _prodQueVaiSerAtualizado = _produtoService.BuscaProdutoPorId(int.Parse(txtIdProdAdd.Text)); /// Buscando produto no banco de dados
+
+                    if (_prodQueVaiSerAtualizado != null) // Verificando se o produro existe no banco de dados
+                    {
+                        _tabelaProdutos.Visible = false;
+                        pnlDadosProdAdd.Visible = true;
+                        lblNomeProdAdd.Text = "Nome: " + _prodQueVaiSerAtualizado.Nome;
+                        lblPrecoProdAdd.Text = "Preço: " + _prodQueVaiSerAtualizado.Preco.ToString("C2"); // Convertendo para string
+                        lblQuantidadeProd.Text = "Quantidade: " + _prodQueVaiSerAtualizado.Quantidade;
+
+                        txtIdProdAdd.Text = "";
+                    }
+                }
+                catch(IOException ex) // Pega exceção quando o usuário informa um usuário negativo
+                {
+                    MessageBox.Show(ex.Message,
+                                    "Mercado Paraíso",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                }
+            }
+            else // Se o valor informado de id para busca for nulo
+            {
+                MessageBox.Show("Insira um valor válido de Id",
+                                "Mercado Paraíso",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
             }
         }
 
 
         private void btnAddQuantidadeProd_Click(object sender, EventArgs e)
         {
-            if (int.Parse(txtQuantidadeASerAdd.Text) < 0)
+            if (!String.IsNullOrEmpty(txtQuantidadeASerAdd.Text)) // Verifica se a quantidade a ser adicionada é nula
             {
-                MessageBox.Show("Não foi possível atualizar a quantidade do produto!\nNão é possível adicionar uma quantidade negativa",
-                                "Mercado Paraíso",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-            }
-            else
-            {
-                // Atualizando a quantidade no objeto
-                _prodQueVaiSerAtualizado.Quantidade += int.Parse(txtQuantidadeASerAdd.Text);
-
-                //Atualizando a quantidade no banco de dados
-                if (_produtoService.AtualizaQuantidadeDoProduto(_prodQueVaiSerAtualizado))
+                if (int.Parse(txtQuantidadeASerAdd.Text) < 0) // Testa se a quantidade a ser adicionada é negativa
                 {
-                    MessageBox.Show("Produto atualizado com sucesso!",
+                    MessageBox.Show("Não foi possível atualizar a quantidade do produto!\nNão é possível adicionar uma quantidade negativa",
                                     "Mercado Paraíso",
-                                     MessageBoxButtons.OK,
-                                     MessageBoxIcon.Information);
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                }
+                else // Se a quantidade informada não for negativa
+                {
+                    // Atualizando a quantidade no objeto
+                    _prodQueVaiSerAtualizado.Quantidade += int.Parse(txtQuantidadeASerAdd.Text);
+
+                    //Atualizando a quantidade no banco de dados
+                    if (_produtoService.AtualizaQuantidadeDoProduto(_prodQueVaiSerAtualizado))
+                    {
+                        MessageBox.Show("Produto atualizado com sucesso!",
+                                        "Mercado Paraíso",
+                                         MessageBoxButtons.OK,
+                                         MessageBoxIcon.Information);
+
+                        txtQuantidadeASerAdd.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possível atualizar a quantidade do produto!",
+                                        "Mercado Paraíso",
+                                         MessageBoxButtons.OK,
+                                         MessageBoxIcon.Warning);
+                    }
 
                     txtQuantidadeASerAdd.Text = "";
+                    pnlDadosProdAdd.Visible = false;
+                    // atualizando a tabela (tela de exibição dos produtos)
+                    txtIdProdAdd.Text = "";
+                    this.CarregarDataGridView(); // Carregando o Data GridView novamente
+                    _tabelaProdutos.Visible = true;
                 }
-                else
-                {
-                    MessageBox.Show("Não foi possível atualizar a quantidade do produto!",
-                                    "Mercado Paraíso",
-                                     MessageBoxButtons.OK,
-                                     MessageBoxIcon.Information);
-                }
-
-                txtQuantidadeASerAdd.Text = "";
-                pnlDadosProdAdd.Visible = false;
-                // atualizando a tabela (tela de exibição dos produtos)
-                txtIdProdAdd.Text = "";
-                this.CarregarDataGridView(); // Carregando o Data GridView novamente
-                _tabelaProdutos.Visible = true;
+            }
+            else // Se a quantidade a ser adicionada for nula
+            {
+                MessageBox.Show("Insira um valor para ser adicionado",
+                                "Mercado Paraíso",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
             }
         }
 
@@ -134,10 +166,6 @@ namespace TrabEstoque.View
         private void btnSairAddProd_Click(object sender, EventArgs e)
         {
             this.Close();
-            TelaInicial telaInicial = new TelaInicial();
-            telaInicial.ShowDialog();
         }
-
-       
     }
 }

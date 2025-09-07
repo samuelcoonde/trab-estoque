@@ -34,6 +34,7 @@
             btnConfirmaIdProdAdd = new Button();
             pnlDgv = new Panel();
             pnlDadosProdAdd = new Panel();
+            btnVoltar = new Button();
             btnAddQuantidadeProd = new Button();
             txtQuantidadeASerAdd = new TextBox();
             lblPedeQuantidadeAdd = new Label();
@@ -42,7 +43,6 @@
             lblProdEncontrado = new Label();
             lblNomeProdAdd = new Label();
             btnSairAddProd = new Button();
-            btnVoltar = new Button();
             pnlDgv.SuspendLayout();
             pnlDadosProdAdd.SuspendLayout();
             SuspendLayout();
@@ -71,7 +71,7 @@
             // 
             txtIdProdAdd.Location = new Point(297, 85);
             txtIdProdAdd.Name = "txtIdProdAdd";
-            txtIdProdAdd.PlaceholderText = "Digite aqui";
+            txtIdProdAdd.PlaceholderText = "Digite aqui...";
             txtIdProdAdd.Size = new Size(202, 23);
             txtIdProdAdd.TabIndex = 2;
             // 
@@ -109,6 +109,17 @@
             pnlDadosProdAdd.Name = "pnlDadosProdAdd";
             pnlDadosProdAdd.Size = new Size(308, 252);
             pnlDadosProdAdd.TabIndex = 0;
+            // 
+            // btnVoltar
+            // 
+            btnVoltar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVoltar.Location = new Point(50, 214);
+            btnVoltar.Name = "btnVoltar";
+            btnVoltar.Size = new Size(99, 23);
+            btnVoltar.TabIndex = 1;
+            btnVoltar.Text = "&Voltar";
+            btnVoltar.UseVisualStyleBackColor = true;
+            btnVoltar.Click += btnVoltar_Click;
             // 
             // btnAddQuantidadeProd
             // 
@@ -183,17 +194,6 @@
             btnSairAddProd.Text = "&Sair";
             btnSairAddProd.UseVisualStyleBackColor = true;
             btnSairAddProd.Click += btnSairAddProd_Click;
-            // 
-            // btnVoltar
-            // 
-            btnVoltar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnVoltar.Location = new Point(50, 214);
-            btnVoltar.Name = "btnVoltar";
-            btnVoltar.Size = new Size(99, 23);
-            btnVoltar.TabIndex = 1;
-            btnVoltar.Text = "&Voltar";
-            btnVoltar.UseVisualStyleBackColor = true;
-            btnVoltar.Click += btnVoltar_Click;
             // 
             // TelaAdicionarProduto
             // 

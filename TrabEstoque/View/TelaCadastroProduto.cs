@@ -23,28 +23,51 @@ namespace TrabEstoque.View
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            Produto prodCadastrar = new Produto(txtNomeProd.Text, float.Parse(txtPrecoProd.Text), int.Parse(txtQuantidadeProd.Text));
-            if (_produtoService.CadastrarProduto(prodCadastrar))
+            if (!(String.IsNullOrEmpty(txtNomeProd.Text) && String.IsNullOrEmpty(txtPrecoProd.Text) && String.IsNullOrEmpty(txtQuantidadeProd.Text))) // Verifica se todos os campos foram preenchidos
             {
-                MessageBox.Show("Produto cadastrado com sucesso!",
-                                "Mercado Paraíso",
-                                 MessageBoxButtons.OK,
-                                 MessageBoxIcon.Information);
+                try
+                {
+                    Produto prodCadastrar = new Produto(txtNomeProd.Text, float.Parse(txtPrecoProd.Text), int.Parse(txtQuantidadeProd.Text));
+
+                    if (_produtoService.CadastrarProduto(prodCadastrar)) // Testa se deu certo cadastrar no banco
+                    {
+                        MessageBox.Show("Produto cadastrado com sucesso!",
+                                        "Mercado Paraíso",
+                                         MessageBoxButtons.OK,
+                                         MessageBoxIcon.Information);
+
+                        txtNomeProd.Text = "";
+                        txtPrecoProd.Text = "";
+                        txtQuantidadeProd.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possível cadastrar o produto",
+                                        "Mercado Paraíso",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                    }
+                }
+                catch(FormatException ex)
+                {
+                    MessageBox.Show("Insira os valores em seus devidos formatos",
+                                    "Mercado Paraíso",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                }   
             }
             else
             {
-                MessageBox.Show("Não foi possível cadastrar o produto",
+                MessageBox.Show("Preencha todos os campos de texto",
                                 "Mercado Paraíso",
                                 MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                                MessageBoxIcon.Warning);
             }
         }
 
         private void btnSairCadastro_Click(object sender, EventArgs e)
         {
             this.Close();
-            TelaInicial telaInicial = new TelaInicial();
-            telaInicial.ShowDialog();
         }
     }
 }
