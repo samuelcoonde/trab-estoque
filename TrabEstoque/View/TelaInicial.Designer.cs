@@ -76,6 +76,7 @@
             btnCadastrarProd.TabIndex = 2;
             btnCadastrarProd.Text = "Cadastrar produto";
             btnCadastrarProd.UseVisualStyleBackColor = false;
+            btnCadastrarProd.Click += btnCadastrarProd_Click;
             // 
             // btnAddProd
             // 
@@ -147,6 +148,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(lblTitulo);
             Name = "TelaInicial";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "TelaInicial";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

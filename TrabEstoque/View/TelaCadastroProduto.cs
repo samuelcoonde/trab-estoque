@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace TrabEstoque.View
 {
-    public partial class TelaInicial : Form
+    public partial class TelaCadastroProduto : Form
     {
-        public TelaInicial()
+        public TelaCadastroProduto()
         {
             InitializeComponent();
-        }
-
-        private void btnCadastrarProd_Click(object sender, EventArgs e)
-        {
-            TelaCadastroProduto telaCadastro = new TelaCadastroProduto();
-            telaCadastro.Show();
-            this.Hide();
         }
     }
 }
