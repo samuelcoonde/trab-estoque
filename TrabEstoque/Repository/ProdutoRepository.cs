@@ -17,7 +17,7 @@ namespace TrabEstoque.Repository
             {
                 conn.Open();
 
-                string query = "INSERT INTO produtos (nome_prod, preco_prod, quantidade_prod)" +
+                string query = "INSERT INTO produto (nome_prod, preco_prod, quantidade_prod)" +
                                "VALUES (@RecebeNome, @RecebePreco, @RecebeQuantidade)";
 
                 try
@@ -54,7 +54,7 @@ namespace TrabEstoque.Repository
                 {
                     conn.Open();
 
-                    string query = "SELECT id_prod AS Id, nome_prod AS Nome, preco_prod AS Preco, quantidade_prod AS Quantidade FROM produtos";
+                    string query = "SELECT id_prod AS Id, nome_prod AS Nome, preco_prod AS Preco, quantidade_prod AS Quantidade FROM produto";
 
                     using (var comando = new NpgsqlCommand(query, conn))
                     {
@@ -92,7 +92,7 @@ namespace TrabEstoque.Repository
                 {
                     conn.Open();
 
-                    string query = "SELECT id_prod AS Id, nome_prod AS Nome, preco_prod AS Preco, quantidade_prod AS Quantidade FROM produtos WHERE id_prod = @RecebeId";
+                    string query = "SELECT id_prod AS Id, nome_prod AS Nome, preco_prod AS Preco, quantidade_prod AS Quantidade FROM produto WHERE id_prod = @RecebeId";
 
                     using (var comando = new NpgsqlCommand(query, conn))
                     {
@@ -130,7 +130,7 @@ namespace TrabEstoque.Repository
                 {
                     conn.Open();
 
-                    string query = "UPDATE produtos SET quantidade_prod = @RecebeNovaQuantidade WHERE id_prod = @RecebeId";
+                    string query = "UPDATE produto SET quantidade_prod = @RecebeNovaQuantidade WHERE id_prod = @RecebeId";
 
                     using (var comando = new NpgsqlCommand(query, conn))
                     {
