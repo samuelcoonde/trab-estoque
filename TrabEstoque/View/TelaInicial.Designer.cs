@@ -70,7 +70,7 @@
             btnCadastrarProd.BackColor = SystemColors.ButtonHighlight;
             btnCadastrarProd.Cursor = Cursors.Hand;
             btnCadastrarProd.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCadastrarProd.Location = new Point(248, 113);
+            btnCadastrarProd.Location = new Point(240, 113);
             btnCadastrarProd.Name = "btnCadastrarProd";
             btnCadastrarProd.Size = new Size(294, 71);
             btnCadastrarProd.TabIndex = 2;
@@ -92,7 +92,7 @@
             // 
             btnRemoverProd.Cursor = Cursors.Hand;
             btnRemoverProd.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            btnRemoverProd.Location = new Point(240, 300);
+            btnRemoverProd.Location = new Point(240, 309);
             btnRemoverProd.Name = "btnRemoverProd";
             btnRemoverProd.Size = new Size(294, 71);
             btnRemoverProd.TabIndex = 4;
@@ -106,6 +106,7 @@
             pictureBox2.Location = new Point(248, 222);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(51, 50);
+            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
             // 
@@ -113,9 +114,10 @@
             // 
             pictureBox3.BackColor = SystemColors.ButtonHighlight;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(248, 309);
+            pictureBox3.Location = new Point(248, 319);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(49, 50);
+            pictureBox3.Size = new Size(51, 50);
+            pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox3.TabIndex = 6;
             pictureBox3.TabStop = false;
             // 
@@ -123,9 +125,10 @@
             // 
             pictureBox4.BackColor = SystemColors.ButtonHighlight;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(248, 133);
+            pictureBox4.Location = new Point(248, 124);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(51, 50);
+            pictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox4.TabIndex = 7;
             pictureBox4.TabStop = false;
             // 
