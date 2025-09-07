@@ -1,4 +1,4 @@
-<h1 align="center">🪙 Controle de Estoque</h1>
+<h1 align="center">Controle de Estoque</h1>
 
 <p align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-plain.svg" width="120" alt="C# Logo"/>
