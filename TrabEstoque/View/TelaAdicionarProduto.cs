@@ -44,9 +44,10 @@ namespace TrabEstoque.View
             }
         }
 
+
         private void btnAddQuantidadeProd_Click(object sender, EventArgs e)
         {
-            if(int.Parse(txtQuantidadeASerAdd.Text) < 0)
+            if (int.Parse(txtQuantidadeASerAdd.Text) < 0)
             {
                 MessageBox.Show("Não foi possível atualizar a quantidade do produto!\nNão é possível adicionar uma quantidade negativa",
                                 "Mercado Paraíso",
@@ -83,6 +84,13 @@ namespace TrabEstoque.View
                 this.CarregarDataGridView(); // Carregando o Data GridView novamente
                 _tabelaProdutos.Visible = true;
             }
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            pnlDadosProdAdd.Visible = false;
+            _tabelaProdutos.Visible = true;
+            txtIdProdAdd.Text = "";
         }
 
         public void ConfiguraDataGridView()
@@ -129,5 +137,7 @@ namespace TrabEstoque.View
             TelaInicial telaInicial = new TelaInicial();
             telaInicial.ShowDialog();
         }
+
+       
     }
 }

@@ -42,6 +42,7 @@
             lblProdEncontrado = new Label();
             lblNomeProdAdd = new Label();
             btnSairAddProd = new Button();
+            btnVoltar = new Button();
             pnlDgv.SuspendLayout();
             pnlDadosProdAdd.SuspendLayout();
             SuspendLayout();
@@ -96,6 +97,7 @@
             // pnlDadosProdAdd
             // 
             pnlDadosProdAdd.BackColor = SystemColors.ButtonHighlight;
+            pnlDadosProdAdd.Controls.Add(btnVoltar);
             pnlDadosProdAdd.Controls.Add(btnAddQuantidadeProd);
             pnlDadosProdAdd.Controls.Add(txtQuantidadeASerAdd);
             pnlDadosProdAdd.Controls.Add(lblPedeQuantidadeAdd);
@@ -111,7 +113,7 @@
             // btnAddQuantidadeProd
             // 
             btnAddQuantidadeProd.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddQuantidadeProd.Location = new Point(155, 185);
+            btnAddQuantidadeProd.Location = new Point(155, 214);
             btnAddQuantidadeProd.Name = "btnAddQuantidadeProd";
             btnAddQuantidadeProd.Size = new Size(100, 23);
             btnAddQuantidadeProd.TabIndex = 6;
@@ -121,7 +123,7 @@
             // 
             // txtQuantidadeASerAdd
             // 
-            txtQuantidadeASerAdd.Location = new Point(40, 185);
+            txtQuantidadeASerAdd.Location = new Point(101, 185);
             txtQuantidadeASerAdd.Name = "txtQuantidadeASerAdd";
             txtQuantidadeASerAdd.PlaceholderText = "Digite aqui...";
             txtQuantidadeASerAdd.Size = new Size(100, 23);
@@ -182,6 +184,17 @@
             btnSairAddProd.UseVisualStyleBackColor = true;
             btnSairAddProd.Click += btnSairAddProd_Click;
             // 
+            // btnVoltar
+            // 
+            btnVoltar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVoltar.Location = new Point(50, 214);
+            btnVoltar.Name = "btnVoltar";
+            btnVoltar.Size = new Size(99, 23);
+            btnVoltar.TabIndex = 1;
+            btnVoltar.Text = "&Voltar";
+            btnVoltar.UseVisualStyleBackColor = true;
+            btnVoltar.Click += btnVoltar_Click;
+            // 
             // TelaAdicionarProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -220,5 +233,6 @@
         private Label lblQuantidadeProd;
         private Label lblPrecoProdAdd;
         private Button btnAddQuantidadeProd;
+        private Button btnVoltar;
     }
 }
