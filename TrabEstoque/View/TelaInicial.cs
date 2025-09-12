@@ -40,5 +40,20 @@ namespace TrabEstoque.View
             telaRetirarProd.ShowDialog();
             this.Show();
         }
+
+        private void btnAddProd_MouseHover(object sender, EventArgs e)
+        {
+            btnAddProd.BackColor = Color.White;
+        }
+
+        private void btnCadastrarProd_MouseHover(object sender, EventArgs e)
+        {
+            btnCadastrarProd.BackColor = Color.White;
+        }
+
+        private void btnRemoverProd_MouseHover(object sender, EventArgs e)
+        {
+            btnRemoverProd.BackColor = Color.White;
+        }
     }
 }

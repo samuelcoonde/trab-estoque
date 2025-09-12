@@ -8,10 +8,10 @@ namespace TrabEstoque.Model
 {
     public class Produto
     {
-        public int _id;
-        public String _nome;
-        public float _preco;
-        public int _quantidade;
+        private int _id;
+        private String _nome;
+        private float _preco;
+        private int _quantidade;
 
         public Produto() { }
 

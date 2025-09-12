@@ -77,6 +77,7 @@
             btnCadastrarProd.Text = "Cadastrar produto";
             btnCadastrarProd.UseVisualStyleBackColor = false;
             btnCadastrarProd.Click += btnCadastrarProd_Click;
+            btnCadastrarProd.MouseHover += btnCadastrarProd_MouseHover;
             // 
             // btnAddProd
             // 
@@ -89,6 +90,7 @@
             btnAddProd.Text = "Adicionar produto";
             btnAddProd.UseVisualStyleBackColor = true;
             btnAddProd.Click += btnAddProd_Click;
+            btnAddProd.MouseHover += btnAddProd_MouseHover;
             // 
             // btnRemoverProd
             // 
@@ -101,6 +103,7 @@
             btnRemoverProd.Text = "Remover produto";
             btnRemoverProd.UseVisualStyleBackColor = true;
             btnRemoverProd.Click += btnRemoverProd_Click;
+            btnRemoverProd.MouseHover += btnRemoverProd_MouseHover;
             // 
             // pictureBox2
             // 
@@ -112,6 +115,8 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += btnAddProd_Click;
+            pictureBox2.MouseHover += btnAddProd_MouseHover;
             // 
             // pictureBox3
             // 
@@ -123,6 +128,8 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox3.TabIndex = 6;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += btnRemoverProd_Click;
+            pictureBox3.MouseHover += btnRemoverProd_MouseHover;
             // 
             // pictureBox4
             // 
@@ -134,6 +141,8 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox4.TabIndex = 7;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += btnCadastrarProd_Click;
+            pictureBox4.MouseHover += btnCadastrarProd_MouseHover;
             // 
             // TelaInicial
             // 

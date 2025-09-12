@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TrabEstoque")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+842a106d823cae76133a8d3f015addf056721b00")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+370522b3d52e3b3eba49104c2181c751bc83e5af")]
 [assembly: System.Reflection.AssemblyProductAttribute("TrabEstoque")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TrabEstoque")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

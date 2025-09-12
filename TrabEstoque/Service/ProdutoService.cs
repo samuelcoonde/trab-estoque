@@ -45,7 +45,7 @@ namespace TrabEstoque.Service
             return _produtoRepository.AtualizaQuantidadeProduto(produto);
         }
 
-        public bool ValidaProduto(Produto produto)
+        private bool ValidaProduto(Produto produto)
         {
             // Se todos os campos estiverem corretos retorna true 
             return (!String.IsNullOrEmpty(produto.Nome) && produto.Quantidade > 0 && produto.Preco > 0);
