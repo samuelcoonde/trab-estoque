@@ -74,7 +74,7 @@
             btnCadastrarProd.Name = "btnCadastrarProd";
             btnCadastrarProd.Size = new Size(294, 71);
             btnCadastrarProd.TabIndex = 2;
-            btnCadastrarProd.Text = "Cadastrar produto";
+            btnCadastrarProd.Text = "&Cadastrar produto";
             btnCadastrarProd.UseVisualStyleBackColor = false;
             btnCadastrarProd.Click += btnCadastrarProd_Click;
             btnCadastrarProd.MouseHover += btnCadastrarProd_MouseHover;
@@ -87,7 +87,7 @@
             btnAddProd.Name = "btnAddProd";
             btnAddProd.Size = new Size(294, 71);
             btnAddProd.TabIndex = 3;
-            btnAddProd.Text = "Adicionar produto";
+            btnAddProd.Text = "&Adicionar produto";
             btnAddProd.UseVisualStyleBackColor = true;
             btnAddProd.Click += btnAddProd_Click;
             btnAddProd.MouseHover += btnAddProd_MouseHover;
@@ -100,7 +100,7 @@
             btnRemoverProd.Name = "btnRemoverProd";
             btnRemoverProd.Size = new Size(294, 71);
             btnRemoverProd.TabIndex = 4;
-            btnRemoverProd.Text = "Remover produto";
+            btnRemoverProd.Text = "&Remover produto";
             btnRemoverProd.UseVisualStyleBackColor = true;
             btnRemoverProd.Click += btnRemoverProd_Click;
             btnRemoverProd.MouseHover += btnRemoverProd_MouseHover;
