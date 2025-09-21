@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
+using TrabEstoque.Interfaces;
 using TrabEstoque.Model;
 
 namespace TrabEstoque.Repository
 {
-    public class ProdutoRepository
+    public class ProdutoRepository : IProdutoDAO
     {
         private readonly string _stringconexao = "Host=localhost;Port=5432;Username=postgres;Password=admin;Database=MercadoParaiso";
         public bool CadastrarProduto(Produto produto)
@@ -39,6 +41,12 @@ namespace TrabEstoque.Repository
                                     "Mercado Paraíso",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
+                }catch(NpgsqlException ex)
+                {
+                    MessageBox.Show("O valor máximo permitido para preço ou quantidade é 100.000.000",
+                                    "Mercado Paraíso",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
                 }
             }
             return false;

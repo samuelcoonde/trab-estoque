@@ -57,6 +57,12 @@ namespace TrabEstoque.View
                                     "Mercado Paraíso",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Warning);
+                }catch(FormatException ex)
+                {
+                    MessageBox.Show("Insira os valores em seus devidos formatos",
+                                    "Mercado Paraíso",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
                 }
             }
             else // Se o id informado for nulo
